@@ -1,14 +1,15 @@
 import React, {useState} from 'react';
-import {Text, TextInput, View} from 'react-native';
+import {Text, TextInput, View, TouchableOpacity } from 'react-native';
 import {Button} from '../../components/buttons';
 import global from '../../assets/styles/global';
-import {Link} from '@react-navigation/native';
+
 
 // Screen style
 
 import styles from './style';
 
-const LogIn = () => {
+const LogIn = ({navigation}) => {
+  // const navigation = useNavigation();
   // Global style
   const {container, input} = global;
 
@@ -33,9 +34,18 @@ const LogIn = () => {
       <Button title="Log in" />
       <Text style={styles.helpText}>
         If you don't have account please{' '}
-        <Link style={styles.link} to={{screen: 'SignUp'}}>
+        {/* <Link style={styles.link} to={{screen: 'SignUp'}}>
           Sign up
-        </Link>
+        </Link> */}
+
+       <TouchableOpacity
+            // style={styles.button}
+            onPress={() =>
+              navigation.push('SignUp', {name : "SignUp"})
+            }
+          >
+            <Text>SignUp sd</Text>
+          </TouchableOpacity>
       </Text>
     </View>
   );

@@ -3,7 +3,7 @@ import {TextInput, View} from 'react-native';
 import {Button} from '../../components/buttons';
 import global from '../../assets/styles/global';
 
-const SignUp = () => {
+const SignUp = ({ navigation }) => {
   // Global style
   const {container, input} = global;
 
