@@ -12,16 +12,11 @@ const global = StyleSheet.create({
   input: {
     borderWidth: 2,
     borderColor: inputBorderColor,
-    padding: 12,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
     width: '100%',
     marginBottom: 25,
     borderRadius: 5,
-  },
-  centerLayout: {
-    padding: 15,
-    justifyContent: "center",
-    alignItems: "center",
-    flex: 1
   },
   underLine: {
     textDecorationLine: 'underline',
@@ -32,6 +27,15 @@ const global = StyleSheet.create({
     textAlign: 'center',
     fontWeight: "700"
   },
+  logoView: {
+    backgroundColor: "#edf7ffe0"
+  },
+  logo: {
+    width: 100,
+    height: 100,
+    marginBottom: 50
+  }
+
 });
 
 export default global;
