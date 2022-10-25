@@ -9,12 +9,6 @@ const global = StyleSheet.create({
     fontSize: 20,
     marginBottom: 50,
   },
-  container: {
-    padding: 15,
-    width: '100%',
-    maxWidth: 400,
-    borderColor: '#ccc',
-  },
   input: {
     borderWidth: 2,
     borderColor: inputBorderColor,
@@ -22,6 +16,21 @@ const global = StyleSheet.create({
     width: '100%',
     marginBottom: 25,
     borderRadius: 5,
+  },
+  centerLayout: {
+    padding: 15,
+    justifyContent: "center",
+    alignItems: "center",
+    flex: 1
+  },
+  underLine: {
+    textDecorationLine: 'underline',
+  },
+  helpTextOne: {
+    color: '#999',
+    fontSize: 16,
+    textAlign: 'center',
+    fontWeight: "700"
   },
 });
 

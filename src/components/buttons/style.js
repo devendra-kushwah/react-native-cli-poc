@@ -27,5 +27,6 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     textTransform: 'uppercase',
   },
+
 });
 export default styles;

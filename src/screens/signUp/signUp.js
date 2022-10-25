@@ -1,17 +1,20 @@
 import React, {useState} from 'react';
-import {TextInput, View} from 'react-native';
+import {TextInput, View, Text} from 'react-native';
+
+// Custom components
 import {Button} from '../../components/buttons';
+// style
 import global from '../../assets/styles/global';
 
-const SignUp = () => {
+const SignUp = ({ navigation }) => {
   // Global style
-  const {container, input} = global;
+  const {centerLayout, input, underLine, helpTextOne} = global;
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [data, setData] = useState();
-
+  
   const submitAction = () => {
     setData({
       name,
@@ -21,7 +24,7 @@ const SignUp = () => {
   };
 
   return (
-    <View style={container}>
+    <View style={centerLayout}>
       <TextInput
         style={input}
         placeholder="Name"
@@ -36,12 +39,14 @@ const SignUp = () => {
       />
       <TextInput
         secureTextEntry
+        type="password"
         style={input}
         placeholder="Password"
         onChangeText={value => setPassword(value)}
         value={password}
       />
       <Button onPress={() => submitAction()} title="Sign up" />
+      <Text style={[helpTextOne, underLine]} onPress={()=> navigation.push("Login")}> Already have an account </Text>
     </View>
   );
 };

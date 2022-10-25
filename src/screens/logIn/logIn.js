@@ -1,22 +1,21 @@
 import React, {useState} from 'react';
-import {Text, TextInput, View} from 'react-native';
+import {Text, TextInput, View } from 'react-native';
+
+// Custom components
 import {Button} from '../../components/buttons';
+
+// style
 import global from '../../assets/styles/global';
-import {Link} from '@react-navigation/native';
 
-// Screen style
+const LogIn = ({navigation}) => {
 
-import styles from './style';
-
-const LogIn = () => {
-  // Global style
-  const {container, input} = global;
+  const {centerLayout, input, underLine, helpTextOne} = global;
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   return (
-    <View style={container}>
+    <View style={centerLayout}>
       <TextInput
         style={input}
         placeholder="Email"
@@ -31,11 +30,12 @@ const LogIn = () => {
         value={password}
       />
       <Button title="Log in" />
-      <Text style={styles.helpText}>
-        If you don't have account please{' '}
-        <Link style={styles.link} to={{screen: 'SignUp'}}>
-          Sign up
-        </Link>
+      <Text style={[helpTextOne, underLine]} 
+         onPress={() =>
+          navigation.push('SignUp')
+        }
+      >
+        Don't have an account ?
       </Text>
     </View>
   );
