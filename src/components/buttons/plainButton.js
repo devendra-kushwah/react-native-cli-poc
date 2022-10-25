@@ -1,12 +1,8 @@
-import React, {useState} from 'react';
 import {TouchableOpacity, Text} from 'react-native';
 
 import styles from './style';
 
-const PlainButton = ({onPress, title}) => {
-  const [isDisabled, setDesabled] = useState(false);
-
-  return (
+const PlainButton = ({onPress, title, isDisabled = false}) => (
     <TouchableOpacity
       disabled={isDisabled}
       onPress={onPress}
@@ -14,6 +10,6 @@ const PlainButton = ({onPress, title}) => {
       <Text style={styles.plainButtonText}>{title}</Text>
     </TouchableOpacity>
   );
-};
+
 
 export default PlainButton;

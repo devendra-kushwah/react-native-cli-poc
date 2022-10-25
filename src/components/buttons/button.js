@@ -2,9 +2,7 @@ import React, {useState} from 'react';
 import {TouchableOpacity, Text} from 'react-native';
 import styles from './style';
 
-const Button = ({onPress, title}) => {
-  const [isDisabled, setDesabled] = useState(false);
-  return (
+const Button = ({onPress, title, isDisabled = false}) => (
     <TouchableOpacity
       disabled={isDisabled}
       onPress={onPress}
@@ -12,6 +10,6 @@ const Button = ({onPress, title}) => {
       <Text style={styles.textStyle}>{title}</Text>
     </TouchableOpacity>
   );
-};
+
 
 export default Button;

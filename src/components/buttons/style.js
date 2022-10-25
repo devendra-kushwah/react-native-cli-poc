@@ -6,7 +6,7 @@ const {buttonBG, buttonColor} = themeprovider;
 const styles = StyleSheet.create({
   buttonStyle: {
     backgroundColor: buttonBG,
-    padding: 15,
+    padding: 12,
     textAlign: 'center',
     borderRadius: 5,
     marginBottom: 20,
@@ -18,8 +18,9 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   plainButtonText: {
-    color: '#000',
+    color: buttonBG,
     textDecorationLine: 'underline',
+    fontWeight: "700"
   },
   textStyle: {
     fontSize: 15,
