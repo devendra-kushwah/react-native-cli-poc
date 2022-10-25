@@ -1,14 +1,8 @@
 import React, {useState} from 'react';
 import {Text, TextInput, View, Image } from 'react-native';
 
-// Custom components
 import {Button, PlainButton} from '../../components/buttons';
-
-// style
-import flexBox from "../../assets/styles/flexBox";
-import layoutOne from "../../assets/styles/layoutOne";
-import global from '../../assets/styles/global';
-import spaces from '../../assets/styles/spaces';
+import {flexBox, layoutOne, global, spaces} from "../../assets/styles";
 
 const {input, helpTextOne, logo} = global;
 const {topView, contentView, mainView} = layoutOne;
@@ -16,8 +10,6 @@ const {flex1, centerY, centerX} = flexBox;
 const {spaceX} = spaces;
 
 const LogIn = ({navigation}) => {
-
-
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -47,7 +39,7 @@ const LogIn = ({navigation}) => {
         } title="Sign up" />
       </Text>
       </View>
-    </View>
+     </View>
   );
 };
 
