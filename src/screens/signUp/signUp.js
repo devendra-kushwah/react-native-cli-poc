@@ -5,13 +5,13 @@ import global from '../../assets/styles/global';
 
 const SignUp = ({ navigation }) => {
   // Global style
-  const {container,centerLayout, input} = global;
+  const {centerLayout, input} = global;
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [data, setData] = useState();
-  container
+  
   const submitAction = () => {
     setData({
       name,

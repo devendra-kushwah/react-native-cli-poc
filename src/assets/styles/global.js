@@ -9,12 +9,6 @@ const global = StyleSheet.create({
     fontSize: 20,
     marginBottom: 50,
   },
-  container: {
-    padding: 15,
-    width: '100%',
-    maxWidth: 400,
-    borderColor: '#ccc',
-  },
   input: {
     borderWidth: 2,
     borderColor: inputBorderColor,
