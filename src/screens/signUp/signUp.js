@@ -1,11 +1,14 @@
 import React, {useState} from 'react';
-import {TextInput, View} from 'react-native';
+import {TextInput, View, Text} from 'react-native';
+
+// Custom components
 import {Button} from '../../components/buttons';
+// style
 import global from '../../assets/styles/global';
 
 const SignUp = ({ navigation }) => {
   // Global style
-  const {centerLayout, input} = global;
+  const {centerLayout, input, underLine, helpTextOne} = global;
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -36,12 +39,14 @@ const SignUp = ({ navigation }) => {
       />
       <TextInput
         secureTextEntry
+        type="password"
         style={input}
         placeholder="Password"
         onChangeText={value => setPassword(value)}
         value={password}
       />
       <Button onPress={() => submitAction()} title="Sign up" />
+      <Text style={[helpTextOne, underLine]} onPress={()=> navigation.push("Login")}> Already have an account </Text>
     </View>
   );
 };

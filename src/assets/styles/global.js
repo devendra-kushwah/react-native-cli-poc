@@ -22,7 +22,16 @@ const global = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     flex: 1
-  }
+  },
+  underLine: {
+    textDecorationLine: 'underline',
+  },
+  helpTextOne: {
+    color: '#999',
+    fontSize: 16,
+    textAlign: 'center',
+    fontWeight: "700"
+  },
 });
 
 export default global;

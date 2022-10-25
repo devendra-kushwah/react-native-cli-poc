@@ -1,16 +1,15 @@
 import React, {useState} from 'react';
-import {Text, TextInput, View, TouchableOpacity } from 'react-native';
+import {Text, TextInput, View } from 'react-native';
+
+// Custom components
 import {Button} from '../../components/buttons';
 
+// style
 import global from '../../assets/styles/global';
-
-
-// Screen style
-import styles from './style';
 
 const LogIn = ({navigation}) => {
 
-  const {centerLayout, input} = global;
+  const {centerLayout, input, underLine, helpTextOne} = global;
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -31,16 +30,12 @@ const LogIn = ({navigation}) => {
         value={password}
       />
       <Button title="Log in" />
-      <Text style={styles.helpText}>
-        If you don't have account please{' '}
-       <TouchableOpacity
-            // style={styles.button}
-            onPress={() =>
-              navigation.push('SignUp', {name : "SignUp"})
-            }
-          >
-            <Text>Signup</Text>
-          </TouchableOpacity>
+      <Text style={[helpTextOne, underLine]} 
+         onPress={() =>
+          navigation.push('SignUp')
+        }
+      >
+        Don't have an account ?
       </Text>
     </View>
   );
