@@ -1,23 +1,22 @@
 import React, {useState} from 'react';
 import {Text, TextInput, View, TouchableOpacity } from 'react-native';
 import {Button} from '../../components/buttons';
+
 import global from '../../assets/styles/global';
 
 
 // Screen style
-
 import styles from './style';
 
 const LogIn = ({navigation}) => {
-  // const navigation = useNavigation();
-  // Global style
-  const {container, input} = global;
+
+  const {centerLayout, input} = global;
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   return (
-    <View style={container}>
+    <View style={centerLayout}>
       <TextInput
         style={input}
         placeholder="Email"
@@ -34,17 +33,13 @@ const LogIn = ({navigation}) => {
       <Button title="Log in" />
       <Text style={styles.helpText}>
         If you don't have account please{' '}
-        {/* <Link style={styles.link} to={{screen: 'SignUp'}}>
-          Sign up
-        </Link> */}
-
        <TouchableOpacity
             // style={styles.button}
             onPress={() =>
               navigation.push('SignUp', {name : "SignUp"})
             }
           >
-            <Text>SignUp sd</Text>
+            <Text>Signup</Text>
           </TouchableOpacity>
       </Text>
     </View>

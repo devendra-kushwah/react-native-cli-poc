@@ -23,6 +23,12 @@ const global = StyleSheet.create({
     marginBottom: 25,
     borderRadius: 5,
   },
+  centerLayout: {
+    padding: 15,
+    justifyContent: "center",
+    alignItems: "center",
+    flex: 1
+  }
 });
 
 export default global;
