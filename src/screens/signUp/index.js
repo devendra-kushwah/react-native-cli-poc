@@ -1,3 +1,3 @@
-import SignUp from './signUp';
+import SignUp from './model';
 
 export default SignUp;
