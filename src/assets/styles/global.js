@@ -34,8 +34,14 @@ const global = StyleSheet.create({
     width: 100,
     height: 100,
     marginBottom: 50
+  },
+  screenTitle: {
+    textTransform: "uppercase",
+    fontSize: 20,
+    fontWeight: "700",
+    marginBottom: 40,
+    color: "#000",
   }
-
 });
 
 export default global;

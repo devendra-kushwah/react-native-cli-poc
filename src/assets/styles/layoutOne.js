@@ -10,8 +10,8 @@ const layoutOne = StyleSheet.create({
       },
     contentView: {
         backgroundColor: "#fff",
-        borderTopRightRadius: 25,
-        borderTopLeftRadius: 25,
+        borderTopRightRadius: 30,
+        borderTopLeftRadius: 30,
         flex: 1,
         paddingHorizontal: 20,
         paddingVertical: 40,

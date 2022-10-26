@@ -1,35 +1,34 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {TextInput, View, Text, Image} from 'react-native';
 
 import {Button, PlainButton} from '../../components/buttons';
-import {flexBox, layoutOne, global, spaces} from "../../assets/styles";
+import {flexBox, layoutOne, global, spaces, shadow} from "../../assets/styles";
 
-const {input, helpTextOne, logo} = global;
+const {input, helpTextOne, logo, screenTitle} = global;
 const {topView, contentView, mainView} = layoutOne;
 const {flex1, centerY, centerX} = flexBox;
 const {spaceX} = spaces;
+const {cardTopShadow} = shadow;
 
-const SignUp = ({ navigation }) => {
-
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [data, setData] = useState();
-  
-  const submitAction = () => {
-    setData({
-      name,
-      email,
-      password,
-    });
-  };
+const SignUpView = ({viewProps }) => {
+ const {
+   navigation,
+   name,
+   email,
+   password,
+   setName,
+   setEmail,
+   setPassword,
+   submitAction
+} = viewProps;
 
   return (
     <View style={[flex1, mainView]}>
         <View style={[centerX, topView]}>
           <Image style={logo} source={require('../../assets/images/logo.png')} />
         </View>
-        <View style={[spaceX,centerY, contentView]}>
+        <View style={[spaceX,centerY, contentView, cardTopShadow]}>
+          <Text style={screenTitle}> Sign up</Text>
           <TextInput
             style={input}
             placeholder="Enter Your Name"
@@ -60,4 +59,4 @@ const SignUp = ({ navigation }) => {
   );
 };
 
-export default SignUp;
+export default SignUpView;
