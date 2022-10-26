@@ -1,5 +1,8 @@
 import React from 'react';
 import {Text, TextInput, View, Image } from 'react-native';
+import FontAwesome, { SolidIcons, RegularIcons, BrandIcons } from 'react-native-fontawesome';
+
+
 
 import {Button, PlainButton} from '../../components/buttons';
 import {flexBox, layoutOne, global, spaces, shadow} from "../../assets/styles";
@@ -20,6 +23,7 @@ const LogInView = ({viewProps}) => {
       </View>
       <View style={[spaceX,centerY, contentView, cardTopShadow]}>
         <Text style={screenTitle}>Sign in</Text>
+        <FontAwesome icon={SolidIcons.smile} />
       <TextInput
         style={input}
         placeholder="Enter Your Email"
