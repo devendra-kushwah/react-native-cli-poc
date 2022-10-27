@@ -3,7 +3,9 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 const InputText = (props)=> {
     const { 
-        icon = "", 
+        icon = "",
+        iconName = "",
+        iconColor= "", 
         value = "", 
         style = {}, 
         placeholder = "", 
