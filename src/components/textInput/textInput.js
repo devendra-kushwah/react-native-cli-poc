@@ -1,5 +1,5 @@
-import {TextInput, Text, Image, View} from "react-native";
-import {User} from "@styled-icons/boxicons-regular/User";
+import {TextInput, Text, View} from "react-native";
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const InputText = (props)=> {
     const { 
@@ -15,7 +15,11 @@ const InputText = (props)=> {
             <Text>{label}</Text>
            } 
            <View>
-            <User />
+           <Icon.Button
+             name="facebook"
+             backgroundColor="#3b5998"
+           >
+           </Icon.Button>
             <TextInput 
                 style={style}
                 placeholder={placeholder}
