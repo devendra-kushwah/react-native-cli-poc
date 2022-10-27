@@ -3,5 +3,6 @@ import global from "./global";
 import spaces from "./spaces";
 import layoutOne from "./layoutOne";
 import shadow from "./shadow";
+import themeprovider from "./theme"
 
-export {flexBox,global, spaces, layoutOne, shadow };
+export {themeprovider, flexBox,global, spaces, layoutOne, shadow };
