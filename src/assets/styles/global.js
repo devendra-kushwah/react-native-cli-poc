@@ -39,7 +39,7 @@ const global = StyleSheet.create({
     textTransform: 'uppercase',
     fontSize: 20,
     fontWeight: '700',
-    marginBottom: 40,
+    marginBottom: 25,
     color: '#000',
   },
 });

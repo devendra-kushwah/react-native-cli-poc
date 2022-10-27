@@ -1,29 +1,35 @@
 import {TextInput, Text, View} from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome';
+import style from "./style";
 
 const InputText = (props)=> {
     const { 
-        icon = "",
+        customStyle={},
+        secure= false,
         iconName = "",
-        iconColor= "", 
+        iconColor= "#666", 
+        buttonBg = "transparent",
         value = "", 
-        style = {}, 
-        placeholder = "", 
+        placeholder = "Add placeholder", 
         label= "",
         onChangeText} = props;
     return(
-        <View> 
+        <View style={customStyle}> 
            {label && 
-            <Text>{label}</Text>
+            <Text style={style.label}>{label}</Text>
            } 
-           <View>
-           <Icon.Button
-             name="facebook"
-             backgroundColor="#3b5998"
-           >
-           </Icon.Button>
-            <TextInput 
-                style={style}
+           <View style={style.inputView}>
+            { iconName && 
+               <Icon.Button
+                size={20}
+                name={iconName}
+                color={iconColor}
+                backgroundColor={buttonBg}
+                />
+            }
+            <TextInput
+                secureTextEntry={secure}
+                style={style.input}
                 placeholder={placeholder}
                 onChangeText={onChangeText}
                 value={value}

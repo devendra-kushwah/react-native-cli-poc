@@ -2,12 +2,13 @@ import React from 'react';
 import {TextInput, View, Text, Image} from 'react-native';
 
 import {Button, PlainButton} from '../../components/buttons';
-import {flexBox, layoutOne, global, spaces, shadow} from "../../assets/styles";
+import InputText from "../../components/textInput"
+import {flexBox, themeprovider, layoutOne, global, spaces, shadow} from "../../assets/styles";
 
 const {input, helpTextOne, logo, screenTitle} = global;
 const {topView, contentView, mainView} = layoutOne;
 const {flex1, centerY, centerX} = flexBox;
-const {spaceX} = spaces;
+const {spaceX, mb_1} = spaces;
 const {cardTopShadow} = shadow;
 
 const SignUpView = ({viewProps }) => {
@@ -28,22 +29,27 @@ const SignUpView = ({viewProps }) => {
           <Image style={logo} source={require('../../assets/images/logo.png')} />
         </View>
         <View style={[spaceX,centerY, contentView, cardTopShadow]}>
-          <Text style={screenTitle}> Sign up</Text>
-          <TextInput
+          {/* <Text style={screenTitle}> Sign up</Text> */}
+          <InputText
+            label="Name"
             style={input}
             placeholder="Enter Your Name"
             onChangeText={value => setName(value)}
             value={name}
           />
-          <TextInput
+          <InputText
+            label="Email"
             style={input}
             placeholder="Enter Your Email"
             onChangeText={value => setEmail(value)}
             value={email}
           />
-          <TextInput
-            secureTextEntry
-            type="Enter Your password" 
+          <InputText
+            customStyle={mb_1}
+            label="Password"
+            iconName="eye"
+            secure
+            iconColor={themeprovider.buttonBG}
             style={input}
             placeholder="Password"
             onChangeText={value => setPassword(value)}
