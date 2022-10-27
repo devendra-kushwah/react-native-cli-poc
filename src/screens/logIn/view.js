@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, TextInput, View, Image } from 'react-native';
+import { Text, TextInput, View, Image } from 'react-native';
 import FontAwesome, { SolidIcons, RegularIcons, BrandIcons } from 'react-native-fontawesome';
 
 
