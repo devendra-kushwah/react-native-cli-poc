@@ -37,7 +37,7 @@ const LogInView = ({viewProps}) => {
           onChangeText={value => setPassword(value)}
           value={password}
         />
-        <Button style={spaces.mt_2} title="Sign in" />
+        <Button  style={spaces.mt_2} onPress={()=> navigation.push('Home')}  title="Sign in" />
         <Text style={[helpTextOne, mb_1]} >
           Forgot password? <PlainButton onPress={() =>
             navigation.push('SignUp')
