@@ -1,15 +1,15 @@
 import React from 'react';
-import { View, Text, Image, ScrollView } from 'react-native';
+import { TextInput, View, Text, Image, ScrollView } from 'react-native';
 
 import {Button, PlainButton} from '../../components/buttons';
 import InputText from "../../components/textInput"
-import { flexBox, themeprovider, layoutOne, global, spaces, shadow } from "../../assets/styles";
+import {flexBox, themeprovider, layoutOne, global, spaces, shadow} from "../../assets/styles";
 
-const { input, helpTextOne, logo, screenTitle } = global;
-const { topView, contentView, mainView } = layoutOne;
-const { flex1, centerY, centerX, flexGrow } = flexBox;
-const { spaceX, mb_1 } = spaces;
-const { cardTopShadow } = shadow;
+const {input, helpTextOne, logo, screenTitle} = global;
+const {topView, contentView, mainView} = layoutOne;
+const {flex1, centerY, centerX} = flexBox;
+const {spaceX, mb_1} = spaces;
+const {cardTopShadow} = shadow;
 
 const SignUpView = ({viewProps }) => {
  const {
@@ -24,7 +24,7 @@ const SignUpView = ({viewProps }) => {
 } = viewProps;
 
   return (
-    <ScrollView contentContainerStyle={flexGrow}>
+    <ScrollView contentContainerStyle={{flexGrow: 1}}>
     <View style={[flex1, mainView]}>
         <View style={[centerX, topView]}>
           <Image style={logo} source={require('../../assets/images/logo.png')} />
