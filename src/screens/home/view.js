@@ -1,37 +1,72 @@
-import React from 'react';
-import { Text, View, Image } from 'react-native';
+import React, { useState, useRef } from 'react';
+import { Text, View, Image, ScrollView, StyleSheet, DrawerLayoutAndroid } from 'react-native';
 import SearchBar from "../../components/searchBar";
-import InputText from "../../components/textInput"
-import {flexBox, themeprovider, layoutOne, global, spaces, shadow} from "../../assets/styles";
-
-const {topView, contentView, mainView} = layoutOne;
-const {flex1, centerY } = flexBox;
-const {spaceX, mb_1} = spaces;
-const {cardTopShadow} = shadow;
+import { flexBox, themeprovider, layoutOne, global, spaces, shadow } from "../../assets/styles";
+import {Button} from "../../components";
+const { topView, contentView, mainView } = layoutOne;
+const { flex1, centerY } = flexBox;
+const { spaceX, mb_1 } = spaces;
+const { cardTopShadow } = shadow;
 import style from "./style";
 
-const HomeView = ({viewProps}) => {
+const HomeView = ({ viewProps }) => {
 
-  const {navigation, email, setEmail, } = viewProps;
+  const { navigation } = viewProps;
+
+  const drawer = useRef(null);
+
+  const navigationView = () => (
+    <View style={[styles.container, styles.navigationContainer]}>
+      <Text style={styles.paragraph}>I'm in the Drawer!</Text>
+      <Button
+        title="Close drawer"
+        onPress={() => drawer.current.closeDrawer()}
+      />
+    </View>
+  );
 
   return (
-    <View style={[flex1, mainView]}>
-      <View style={[ style.view]}>
-         <SearchBar placeholder="Search for service" />
-          {/* <Image style={logo} source={require('../../assets/images/logo.png')} /> */}
-      </View>
-      <View style={[spaceX,centerY, contentView, cardTopShadow]}>
-        {/* <Text style={screenTitle}>Sign in</Text> */}
-        <InputText 
-          label="Email"
-          placeholder="Enter Your Email"
-          onChangeText={value => setEmail(value)}
-          value={email}
+
+    <DrawerLayoutAndroid
+      ref={drawer}
+      drawerWidth={300}
+      drawerPosition="left"
+      renderNavigationView={navigationView}
+    >
+      <ScrollView style={style.view}>
+      <Button
+          style={{marginBottom: 10}}
+          title="Open drawer"
+          onPress={() => drawer.current.openDrawer()}
         />
-   
+      <View>
+        <SearchBar placeholder="Search for service" />
+        {/* <Image style={logo} source={require('../../assets/images/logo.png')} /> */}
       </View>
-     </View>
+      <View>
+  
+      </View>
+    </ScrollView>
+    </DrawerLayoutAndroid>
   );
 };
 
 export default HomeView;
+
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 16
+  },
+  navigationContainer: {
+    backgroundColor: "#ecf0f1"
+  },
+  paragraph: {
+    padding: 16,
+    fontSize: 15,
+    textAlign: "center"
+  }
+});
