@@ -15,7 +15,7 @@ const LogInView = ({viewProps}) => {
   const {navigation, email, password, setEmail, setPassword} = viewProps;
 
   return (
-    <ScrollView contentContainerStyle={flexGrow}>
+    <ScrollView contentContainerStyle={{flexGrow: 1}}>
       <View style={[flex1, mainView]}>
         <View style={[centerX, topView]}>
             <Image style={logo} source={require('../../assets/images/logo.png')} />
@@ -38,7 +38,7 @@ const LogInView = ({viewProps}) => {
             onChangeText={value => setPassword(value)}
             value={password}
           />
-          <Button style={spaces.mt_2} title="Sign in" />
+          <Button onPress={()=> navigation.push("Home")} style={spaces.mt_2} title="Sign in" />
           <Text style={[helpTextOne, mb_1]} >
             Forgot password? <PlainButton onPress={() =>
               navigation.push('SignUp')
