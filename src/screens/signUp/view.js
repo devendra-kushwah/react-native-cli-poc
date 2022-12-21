@@ -1,5 +1,7 @@
 import React from 'react';
-import { View, Text, Image, ScrollView } from 'react-native';
+
+import { TextInput, View, Text, Image, ScrollView } from 'react-native';
+
 
 import {Button, PlainButton} from '../../components/buttons';
 import InputText from "../../components/textInput"
@@ -24,7 +26,9 @@ const SignUpView = ({viewProps }) => {
 } = viewProps;
 
   return (
-    <ScrollView contentContainerStyle={flexGrow}>
+
+    <ScrollView contentContainerStyle={{flexGrow: 1}}>
+
     <View style={[flex1, mainView]}>
         <View style={[centerX, topView]}>
           <Image style={logo} source={require('../../assets/images/logo.png')} />
