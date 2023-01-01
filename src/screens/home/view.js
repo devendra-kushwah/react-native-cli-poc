@@ -35,12 +35,12 @@ const HomeView = ({ viewProps }) => {
       drawerPosition="left"
       renderNavigationView={navigationView}
     >
-      <ScrollView style={style.view}>
-        {/* <Button
+        <Button
           style={{ marginBottom: 10 }}
-          title="Open drawer"
+          title="top Menu"
           onPress={() => drawer.current.openDrawer()}
-        /> */}
+        />
+      <ScrollView style={style.view}>
         <View>
           <SearchBar placeholder="Search for service" />
           {/* <Image style={logo} source={require('../../assets/images/logo.png')} /> */}

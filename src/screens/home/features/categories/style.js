@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     //   marginTop: StatusBar.currentHeight || 0,
     },
     item: {
-      backgroundColor: '#b9f6e2',
+      backgroundColor: '#00b9ad61', // '#b9f6e2',
       paddingVertical: 7,
       paddingHorizontal: 15,
       marginVertical: 0,
@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
     },
     badge: {
       fontSize: 12,
+      color: "#000"
     }
   });
 
