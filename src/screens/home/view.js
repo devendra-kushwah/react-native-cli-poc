@@ -2,12 +2,14 @@ import React, { useState, useRef } from 'react';
 import { Text, View, Image, ScrollView, StyleSheet, DrawerLayoutAndroid } from 'react-native';
 import SearchBar from "../../components/searchBar";
 import { flexBox, themeprovider, layoutOne, global, spaces, shadow } from "../../assets/styles";
-import {Button} from "../../components";
+import { Button } from "../../components";
 const { topView, contentView, mainView } = layoutOne;
 const { flex1, centerY } = flexBox;
 const { spaceX, mb_1 } = spaces;
 const { cardTopShadow } = shadow;
+
 import style from "./style";
+import { TopServices, Categories } from "./features";
 
 const HomeView = ({ viewProps }) => {
 
@@ -34,19 +36,24 @@ const HomeView = ({ viewProps }) => {
       renderNavigationView={navigationView}
     >
       <ScrollView style={style.view}>
-      <Button
-          style={{marginBottom: 10}}
+        {/* <Button
+          style={{ marginBottom: 10 }}
           title="Open drawer"
           onPress={() => drawer.current.openDrawer()}
-        />
-      <View>
-        <SearchBar placeholder="Search for service" />
-        {/* <Image style={logo} source={require('../../assets/images/logo.png')} /> */}
-      </View>
-      <View>
-  
-      </View>
-    </ScrollView>
+        /> */}
+        <View>
+          <SearchBar placeholder="Search for service" />
+          {/* <Image style={logo} source={require('../../assets/images/logo.png')} /> */}
+        </View>
+        <View style={style.blockSpace}>
+          <Text style={style.title}>Categories</Text>
+          <Categories />
+        </View>
+        <View>
+          <Text style={style.title}>Top Services</Text>
+          <TopServices />
+        </View>
+      </ScrollView>
     </DrawerLayoutAndroid>
   );
 };
