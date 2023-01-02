@@ -10,7 +10,7 @@ const Routes = ()=> {
     <NavigationContainer>
         <Stack.Navigator initialRouteName="Welcome">
           <Stack.Screen options={{headerShown: false}} name="Login" component={LogIn} />
-          <Stack.Screen options={{headerShown: false}} name="Branding" component={Welcome} />
+          <Stack.Screen options={{headerShown: false}} name="Welcome" component={Welcome} />
           <Stack.Screen options={{headerShown: false}} name="Home" component={Home} />
           <Stack.Screen options={{headerShown: false}} name="SignUp" component={SignUp} />
         </Stack.Navigator>
