@@ -6,6 +6,7 @@ const shadow = StyleSheet.create({
         shadowOpacity: 0.2,
         elevation: 50 // only works in view
     }
+
 });
 
 export default shadow;
