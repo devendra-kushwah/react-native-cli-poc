@@ -11,7 +11,7 @@ const { flex1, centerY, centerX, flexGrow } = flexBox;
 const { spaceX, mb_1 } = spaces;
 const { cardTopShadow } = shadow;
 
-const BrandingView = ({viewProps}) => {
+const Welcome = ({viewProps}) => {
   const {navigation, email, password, setEmail, setPassword} = viewProps;
 
   return (
@@ -59,4 +59,4 @@ const BrandingView = ({viewProps}) => {
   );
 };
 
-export default BrandingView;
+export default Welcome;
