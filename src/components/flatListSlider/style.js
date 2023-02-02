@@ -16,7 +16,7 @@ const style = StyleSheet.create({
     color: '#fff'
   },
   slides: {
-    // maxHeight: 600,
+    maxHeight: 600,
   }
 })
 

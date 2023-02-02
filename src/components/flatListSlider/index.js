@@ -5,7 +5,7 @@ import style from './style';
 
 const { width, height } = Dimensions.get("window");
 
-const Slider = (props) => {
+const FlatListSlider = (props) => {
 
   const {title= "", promo= "", url= {}} = props; 
    let flatListRef = useRef(<FlatList props={props} />);
@@ -36,4 +36,4 @@ const Slider = (props) => {
   )
 }
 
-export default Slider
+export default FlatListSlider;

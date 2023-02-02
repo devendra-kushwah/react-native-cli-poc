@@ -1,4 +1,5 @@
-import {Button, PlainButton} from "./buttons";
-import Slider from "./slider";
+import { Button, PlainButton } from "./buttons";
+import FlatListSlider from "./flatListSlider";
+import ScrollViewSlider from "./scrollViewSlider";
 
-export { Slider, Button, PlainButton };
+export { FlatListSlider, Button, PlainButton, ScrollViewSlider };

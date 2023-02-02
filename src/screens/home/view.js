@@ -8,6 +8,7 @@ const { flex1, centerY } = flexBox;
 const { spaceX, mb_1 } = spaces;
 const { cardTopShadow } = shadow;
 
+import {ScrollViewSlider} from ".././../components";
 import style from "./style";
 import { TopServices, Categories } from "./features";
 
@@ -45,11 +46,11 @@ const HomeView = ({ viewProps }) => {
           <SearchBar placeholder="Search for service" />
           {/* <Image style={logo} source={require('../../assets/images/logo.png')} /> */}
         </View>
-      
         <View style={style.blockSpace}>
           <Text style={style.title}>Categories</Text>
           <Categories />
         </View>
+      <ScrollViewSlider />
         <View>
           <Text style={style.title}>Top Services</Text>
           <TopServices />
