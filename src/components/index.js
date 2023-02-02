@@ -1,3 +1,4 @@
 import {Button, PlainButton} from "./buttons";
+import Slider from "./slider";
 
-export { Button, PlainButton };
+export { Slider, Button, PlainButton };

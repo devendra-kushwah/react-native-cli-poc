@@ -45,6 +45,7 @@ const HomeView = ({ viewProps }) => {
           <SearchBar placeholder="Search for service" />
           {/* <Image style={logo} source={require('../../assets/images/logo.png')} /> */}
         </View>
+      
         <View style={style.blockSpace}>
           <Text style={style.title}>Categories</Text>
           <Categories />
