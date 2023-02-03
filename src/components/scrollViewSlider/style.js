@@ -8,20 +8,18 @@ const style = StyleSheet.create({
     marginBottom: 15
   },
   dots: {
-    position: 'absolute',
+    // position: 'absolute',
     bottom: 5,
     flexDirection: 'row',
     alignSelf : 'center'
   },
   dot: {
-    width: 10,
-    height: 10,
-    backgroundColor: '#999',
     margin: 3,
-    borderRadius: 10
+    color: '#999'
   },
   activeDot: {
-    backgroundColor: 'red',
+    color: '#000',
+    margin: 3
   }
 })
 

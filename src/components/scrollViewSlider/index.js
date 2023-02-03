@@ -7,6 +7,7 @@ const { width, height } = Dimensions.get("window");
 
 const ScrollViewSlider = (props) => {
   const [activeSlide, setActiveSlide] = useState(0);
+  const [slide, setSlide] = useState(data)
 
   const slideOnChange = (event)=> {
      if(event){
@@ -27,7 +28,8 @@ const ScrollViewSlider = (props) => {
              horizontal
              style={{height: height * 0.25, width: width,  borderRadius: 10}}
            >
-            { data.map((item)=> {
+            {/* Slide Items */}
+            { slide.map((item)=> {
                   return <Image 
                            resizeMode='stretch'
                            key={item.id}
@@ -36,13 +38,10 @@ const ScrollViewSlider = (props) => {
                           />
             })}
            </ScrollView>
+           {/* Dots */}
            <View style={style.dots}>
-                 {data.map((item, index)=> {
-                  console.log("🚀 ~ file: index.js:10 ~ ScrollViewSlider ~ activeSlide", activeSlide)
-
-                  console.log("🚀 ~ file: index.js:43 ~ {data.map ~ index", index)
-                  // return <Text key={item.id} style={activeSlide !== index ? style.activeDot: style.dot }></Text>
-                  return <Text key={item.id} style={style.dot }></Text>
+                 {slide.map((item, index)=> {
+                  return <Text key={item.id} style={activeSlide == index ? style.activeDot : style.dot }>●</Text>
                  })}
            </View>
        </View>
