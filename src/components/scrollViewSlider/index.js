@@ -6,7 +6,7 @@ import style from './style';
 const { width, height } = Dimensions.get("window");
 
 const ScrollViewSlider = (props) => {
-  const { data = data } = props;
+  const { slideData = data } = props;
 
   const [activeSlide, setActiveSlide] = useState(0);
 
@@ -30,7 +30,7 @@ const ScrollViewSlider = (props) => {
           style={{ height: height * 0.25, width: width, borderRadius: 10 }}
         >
           {/* Slide Items */}
-          { data.map((item) => {
+          { slideData.map((item) => {
             return <Image
               resizeMode='stretch'
               key={item.id}
@@ -41,7 +41,7 @@ const ScrollViewSlider = (props) => {
         </ScrollView>
         {/* Dots */}
         <View style={style.dots}>
-          { data.map((item, index) => {
+          { slideData.map((item, index) => {
             return <Text key={item.id} style={activeSlide == index ? style.activeDot : style.dot}>●</Text>
           })}
         </View>
